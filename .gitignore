@@ -1,0 +1,45 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore build output
+dist/
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore credentials
+*.json
+!package.json
+!tsconfig.json
+!package-lock.json
+service-account-*.json
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore test coverage
+coverage/
+.nyc_output/
+
+# Ignore temporary files
+*.tmp
+*.temp
+.cache/

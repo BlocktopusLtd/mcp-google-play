@@ -1,0 +1,54 @@
+# Claude Project Preferences for mcp-google-play
+
+## IMPORTANT: This project uses common workflow preferences
+- See https://github.com/BlocktopusLtd/claude-workflow for standard Git, PR, and workflow practices
+- This file contains only project-specific customizations
+
+## Project-Specific Context
+- This is an MCP (Model Context Protocol) server
+- Provides Google Play Store command line tools integration
+- TypeScript-based implementation
+- Integrates with Claude and other AI assistants
+- npm package for easy installation and use
+
+## Development Patterns
+- Follow TypeScript best practices
+- Maintain MCP protocol compliance
+- Consider async/await patterns for server operations
+- Keep error handling robust
+- Use Google Play APIs responsibly
+- Handle authentication and credentials securely
+
+## Project-Specific MCP Servers
+- filesystem: For file operations in C:/dev/mcp-google-play
+- git: For version control operations
+- github: For PR creation and GitHub integration
+
+## GitHub Repository
+- Repository: https://github.com/BlocktopusLtd/mcp-google-play
+
+## Package Structure
+- npm package name: @blocktopus/mcp-google-play
+- Main entry point: dist/index.js
+- TypeScript source in src/
+- Use semantic versioning
+
+## Google Play Store Integration
+- Support common Play Console operations
+- App listing management
+- Release management
+- Store listing updates
+- Review responses
+- Statistics and reporting
+
+## Security Considerations
+- Never store credentials in code
+- Use environment variables or secure config
+- Follow Google Play API best practices
+- Handle API rate limits gracefully
+
+## Project-Specific Problem Areas
+- Google Play API authentication can be complex
+- Service account JSON files need secure handling
+- API quotas and rate limits must be respected
+- Different API versions may have compatibility issues
