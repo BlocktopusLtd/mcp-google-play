@@ -23,14 +23,39 @@ npm install -g @blocktopus/mcp-google-play
 
 1. Create a Google Cloud service account with Play Console API access
 2. Download the service account JSON key file
-3. Set the environment variable:
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-key.json
-   ```
+3. Use one of these methods to provide the API key:
+
+#### Method 1: Command Line Argument (Recommended)
+```bash
+npx @blocktopus/mcp-google-play --api-key /path/to/service-account-key.json
+```
+
+#### Method 2: Environment Variable
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-key.json
+npx @blocktopus/mcp-google-play
+```
 
 ### With Claude Desktop
 
 Add to your Claude desktop configuration:
+
+```json
+{
+  "mcpServers": {
+    "google-play": {
+      "command": "npx",
+      "args": [
+        "@blocktopus/mcp-google-play",
+        "--api-key",
+        "/path/to/service-account-key.json"
+      ]
+    }
+  }
+}
+```
+
+Or using environment variable:
 
 ```json
 {
