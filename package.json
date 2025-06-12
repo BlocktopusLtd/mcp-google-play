@@ -4,6 +4,9 @@
   "description": "MCP server for Google Play Store command line tools",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-google-play": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
