@@ -7,6 +7,10 @@
   "bin": {
     "mcp-google-play": "dist/index.js"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
