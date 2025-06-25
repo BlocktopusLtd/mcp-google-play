@@ -1,6 +1,6 @@
 {
   "name": "@blocktopus/mcp-google-play",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Google Play Store command line tools",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
