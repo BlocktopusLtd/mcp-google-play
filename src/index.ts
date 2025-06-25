@@ -45,8 +45,12 @@ async function initializeAuth() {
       scopes: ['https://www.googleapis.com/auth/androidpublisher']
     });
     
-    // Initialize Play Developer API
-    androidpublisher = google.androidpublisher('v3');
+    // Initialize Play Developer API with auth
+    const authClient = await auth.getClient();
+    androidpublisher = google.androidpublisher({
+      version: 'v3',
+      auth: authClient as any
+    });
   } catch (error) {
     console.error(`Error: Cannot access API key file at ${apiKeyPath}`);
     process.exit(1);
@@ -174,9 +178,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
 
   try {
-    // Authenticate
-    const authClient = await auth.getClient();
-    google.options({ auth: authClient });
+    // Auth is already set up in androidpublisher instance
 
     switch (name) {
       case 'list_apps': {

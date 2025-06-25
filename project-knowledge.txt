@@ -1,0 +1,48 @@
+# Project Knowledge Instructions for mcp-google-play
+
+## IMPORTANT: Dynamic File Loading
+
+This project uses several configuration and documentation files that are frequently updated. Instead of relying on the static versions in project knowledge, ALWAYS read the current versions of these files from the filesystem using MCP tools at the start of each session:
+
+### Files to Read Fresh Every Time:
+1. **`C:/dev/mcp-google-play/claude_project_preferences.txt`** - Contains current workflow preferences, MCP-specific patterns, and Google Play API considerations
+2. **`C:/dev/claude-workflow/claude-workflow-preferences.txt`** - General workflow and development preferences from BlocktopusLtd
+3. **`C:/dev/mcp-google-play/README.md`** - Current documentation of features, installation, and usage
+4. **`C:/dev/mcp-google-play/package.json`** - Current dependencies, scripts, and package configuration
+5. **`C:/dev/mcp-google-play/src/index.ts`** - Main MCP server implementation
+
+### Preference Priority:
+**IMPORTANT**: If there's a conflict between preferences, project-specific preferences (`claude_project_preferences.txt`) always override general workflow preferences (`claude-workflow-preferences.txt`).
+
+### How to Load:
+```
+Use read_file or read_multiple_files with the exact paths shown above
+```
+
+### Why This Matters:
+- These files are actively maintained and updated as the project evolves
+- The versions in project knowledge are static snapshots that become outdated
+- Reading fresh ensures you always follow the latest preferences and have accurate documentation
+- MCP server implementations change frequently as the protocol evolves
+
+### Working Directory:
+- Default working directory: `C:/dev/mcp-google-play`
+- Always confirm with user if uncertain
+- Use git_set_working_dir at session start if needed
+
+### Project Context:
+- This is an MCP (Model Context Protocol) server implementation
+- Provides Google Play Store integration for AI assistants
+- TypeScript-based with standard MCP SDK patterns
+- Published as npm package: @blocktopus/mcp-google-play
+- Follows BlocktopusLtd workflow standards
+
+### Key Technical Areas:
+- Google Play API authentication and credential handling
+- MCP protocol compliance and tool implementation
+- TypeScript async/await patterns for API calls
+- Error handling and rate limiting
+- Secure credential management (never hardcoded)
+
+### Remember:
+The project knowledge serves as a bootstrap to tell you where to find the real, current documentation. Always prioritize the filesystem versions over anything in project knowledge.
